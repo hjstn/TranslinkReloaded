@@ -1,0 +1,22 @@
+modifierBlocks:
+  WOOL-14:
+    effect: haltCart
+    emptyEffect: destroyEmptyCart
+    poweredEffect: default
+    poweredEmptyEffect: destroyEmptyCart
+
+# all effects inherit default
+effects:
+  # only add this if you want to change default behaviour - not recommended
+  default:
+    eject: false
+    destroy: false
+    speedMultiplier: 1
+
+  haltCart:
+    message: true
+    speedMultiplier: 0
+
+  destroyEmptyCart:
+    inherit: haltCart
+    destroy: true
